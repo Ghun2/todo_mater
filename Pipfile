@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-extensions = "*"
+"psycopg2-binary" = "*"
+gunicorn = "*"
+factory-boy = "*"
+titlecase = "*"
+bleach = "*"
+django = "==2.1.8"
+django-todo = "==2.4.4"
+
+[dev-packages]
+pylint = "*"
+"flake8" = "*"
+pytest = "*"
+pytest-django = "*"
+mypy = "*"
+
+[requires]
+python_version = "3.7"
