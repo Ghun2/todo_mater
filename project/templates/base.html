@@ -18,7 +18,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/static/favicon.ico">
 
-    <title>django-todo</title>
+    <title>샐러리 팀</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -36,22 +36,25 @@
     <header>
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/">django-todo</a>
+        <a class="navbar-brand" href="/">샐러리 팀 상황 보드</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
-              <li class="nav-item"><a href="{% url 'todo:lists' %}" class="nav-link">To-do Lists</a></li>
-              <li class="nav-item"><a href="{% url 'todo:mine' %}" class="nav-link">My Tasks</a></li>
-              <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Log Out</a></li>
-              {# Simulate external user adding ticket #}
-              <li class="nav-item"><a href="{% url 'todo:external_add' %}" class="nav-link">File Ticket</a></li>
-              <li class="nav-item"><a href="{% url 'todo:import_csv' %}" class="nav-link">Import</a></li>
+              <li class="nav-item"><a href="{% url 'todo:lists' %}" class="nav-link">프로젝트</a></li>
+              <li class="nav-item"><a href="{% url 'todo:mine' %}" class="nav-link">나의 업무</a></li>
 
+              {# Simulate external user adding ticket #}
+{#              <li class="nav-item"><a href="{% url 'todo:external_add' %}" class="nav-link">File Ticket</a></li>#}
+              <li class="nav-item"><a href="{% url 'todo:import_csv' %}" class="nav-link">가져오기</a></li>
+              <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">로그아웃</a></li>
+{#              {% if user.username == 'admin' %}#}
+{#                <li class="nav-item"><a href="{% url "admin" %}" class="nav-link">어드민</a></li>#}
+{#              {% endif %}#}
             {% else %}
-              <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log In</a></li>
+              <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">로그인</a></li>
             {% endif %}
           </ul>
 
@@ -83,7 +86,7 @@
     <footer class="footer">
       <div class="container">
         <span class="text-muted">
-          django-todo, {% now "Y" %}.
+          샐러리 팀 상황 보드, {% now "Y" %}.
           {% if user.is_authenticated %}Logged in as {{ user.username }}{% endif %}</span>
       </div>
     </footer>

@@ -12,6 +12,8 @@ titlecase = "*"
 bleach = "*"
 django = "==2.1.8"
 django-todo = "==2.4.4"
+mysqlclient = "*"
+django-sudo = "*"
 
 [dev-packages]
 pylint = "*"

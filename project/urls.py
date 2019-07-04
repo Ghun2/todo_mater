@@ -10,8 +10,9 @@ urlpatterns = (
         path("", TemplateView.as_view(template_name="home.html"), name="home"),
         path("login", auth_views.LoginView.as_view(), name="login"),
         path("logout", auth_views.LogoutView.as_view(), name="logout"),
-        path("gtdadmin/", admin.site.urls),
+        path("admin/", admin.site.urls, name="admin"),
         path("todo/", include("todo.urls", namespace="todo")),
+        # path("admin/", admin.site.urls)
     ]
     # Static media in DEBUG mode:
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,38 @@
+-- insert into auth_user (
+--     date_joined,
+--     email,
+--     first_name,
+--     last_name,
+--     is_active,
+--     is_staff,
+--     is_superuser,
+--     password,
+--     username)
+-- values (
+--     '2019-07-04',
+--     'ghun22ee@gmail.com',
+--     'kissm',
+--     'jihuns',
+--     1,
+--     1,
+--     1,
+--     '',
+--     'ghun2')
+-- ;
+
+select
+    au.date_joined,
+    au.email,
+    au.first_name,
+    au.id,
+    au.is_active,
+    au.is_staff,
+    au.is_superuser,
+    au.last_login,
+    au.last_name,
+    au.password,
+    au.username
+from
+    auth_user au;
+
+
