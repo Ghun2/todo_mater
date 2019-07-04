@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b45534d2a3234015d9f566e192be55880bb77bc75bb21e79dd2361ee10d28d0d"
+            "sha256": "14d84fc06c6b78cfe8123808dbaea312393c87643999579e58db7b5934d493ed"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -49,11 +49,8 @@
             "version": "==2.1.0"
         },
         "django-todo": {
-            "hashes": [
-                "sha256:ec7efa42a862fc99f6f2f94c46ad9fa39be937a66239ba0a5eef554b5d92dfce"
-            ],
-            "index": "pypi",
-            "version": "==2.4.4"
+            "editable": true,
+            "path": "./django-todo-master"
         },
         "factory-boy": {
             "hashes": [

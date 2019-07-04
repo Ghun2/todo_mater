@@ -13,6 +13,9 @@ titlecase = "*"
 bleach = "*"
 django-autocomplete-light = "*"
 html2text = "*"
+project = "*"
+setuptools = "*"
+wheel = "*"
 
 [dev-packages]
 mypy = "*"

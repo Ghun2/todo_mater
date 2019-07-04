@@ -5,7 +5,7 @@ from os import path
 
 from setuptools import setup, find_packages
 
-from project import todo
+import todo
 
 here = path.abspath(path.dirname(__file__))
 
@@ -20,7 +20,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/shacker/django-todo",
-    author="Scot Hacker",
+    author="Scot Hacker_Ghun2",
     # For a list of valid classifiers, see https://pypi.org/classifiers/
     classifiers=[
         "Development Status :: 5 - Production/Stable",

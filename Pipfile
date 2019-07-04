@@ -11,7 +11,7 @@ factory-boy = "*"
 titlecase = "*"
 bleach = "*"
 django = "==2.1.8"
-django-todo = "==2.4.4"
+django-todo = {path = "./django-todo-master", editable = true}
 mysqlclient = "*"
 django-sudo = "*"
 
