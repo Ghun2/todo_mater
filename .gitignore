@@ -256,3 +256,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/macos,windows,pycharm+all
+
+.sqlite3
+
+local.py
+fabfile.py

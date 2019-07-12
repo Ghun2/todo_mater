@@ -22,12 +22,18 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <!-- Custom styles for this template -->
     <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
 
+
     {# Additional CSS or html head data inserted by templates here. #}
     {% block extrahead %}{% endblock extrahead %}
+
+      <style type="text/css">
+        @media(max-width:767px) {
+            .hideonmobile1{display:none;}
+            }
+      </style>
 
   </head>
 
@@ -43,12 +49,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
-              <li class="nav-item"><a href="{% url 'todo:lists' %}" class="nav-link">프로젝트</a></li>
-              <li class="nav-item"><a href="{% url 'todo:mine' %}" class="nav-link">나의 업무</a></li>
+              <li class="nav-item"><a href="{% url 'todo:remote_work' %}" class="nav-link">원격근무</a></li>
+              <li class="nav-item"><a href="{% url 'todo:list_detail' 4 "doctorsalary" %}" class="nav-link">할일목록</a></li>
+              <li class="nav-item"><a href="{% url 'todo:mine' %}" class="nav-link">나의 할일</a></li>
 
               {# Simulate external user adding ticket #}
 {#              <li class="nav-item"><a href="{% url 'todo:external_add' %}" class="nav-link">File Ticket</a></li>#}
-              <li class="nav-item"><a href="{% url 'todo:import_csv' %}" class="nav-link">가져오기</a></li>
+{#              <li class="nav-item"><a href="{% url 'todo:import_csv' %}" class="nav-link">가져오기</a></li>#}
               <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">로그아웃</a></li>
 {#              {% if user.username == 'admin' %}#}
 {#                <li class="nav-item"><a href="{% url "admin" %}" class="nav-link">어드민</a></li>#}
@@ -61,7 +68,7 @@
           {% if user.is_authenticated %}
       		  <form class="form-inline mt-2 mt-md-0" action="{% url 'todo:search' %}" method="get" placeholder="Search" aria-label="Search">
               <input type="text" name="q" value="" class="form-control mr-sm-2" id="q">
-              <input type="submit" value="Search Tasks" class="btn btn-outline-success my-2 my-sm-0">
+              <input type="submit" value="할일 찾기" class="btn btn-outline-success my-2 my-sm-0">
             </form>
           {% endif %}
 
@@ -95,10 +102,12 @@
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
     {% block extra_js %}{% endblock extra_js %}
 

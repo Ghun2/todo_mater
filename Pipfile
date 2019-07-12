@@ -11,9 +11,10 @@ factory-boy = "*"
 titlecase = "*"
 bleach = "*"
 django = "==2.1.8"
-django-todo = {path = "./django-todo-master", editable = true}
+django-todo = {path = "./django-todo-master",editable = true}
 mysqlclient = "*"
 django-sudo = "*"
+django-bootstrap3-datetimepicker = "*"
 
 [dev-packages]
 pylint = "*"

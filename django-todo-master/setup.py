@@ -1,4 +1,4 @@
-# Based on setup.py master example at https://github.com/pypa/sampleproject/blob/master/setup.py
+
 
 from io import open
 from os import path
@@ -19,7 +19,7 @@ setup(
     description="A multi-user, multi-group task management and assignment system for Django.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/shacker/django-todo",
+    url="",
     author="Scot Hacker_Ghun2",
     # For a list of valid classifiers, see https://pypi.org/classifiers/
     classifiers=[
@@ -41,9 +41,5 @@ setup(
     include_package_data=True,  # Pulls in non-module data from MANIFEST.in
     python_requires=">=3.5",
     install_requires=["unidecode"],
-    project_urls={
-        "Demo Site": "http://django-todo.org",
-        "Bug Reports": "https://github.com/shacker/django-todo/issues",
-        "Source": "https://github.com/shacker/django-todo",
-    },
+    project_urls={},
 )

@@ -13,6 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
 TIME_ZONE = 'Asia/Seoul'
+USE_TZ = False
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -108,6 +109,8 @@ MESSAGE_TAGS = {message_constants.ERROR: "danger"}
 
 # Override in local.py
 DATABASES = {}
+
+
 
 # Todo-specific settings
 TODO_STAFF_ONLY = False
