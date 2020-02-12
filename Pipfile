@@ -10,7 +10,7 @@ gunicorn = "*"
 factory-boy = "*"
 titlecase = "*"
 bleach = "*"
-django = "==2.1.8"
+django = "==2.2.10"
 django-todo = {path = "./django-todo-master",editable = true}
 mysqlclient = "*"
 django-sudo = "*"
